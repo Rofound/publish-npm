@@ -1,0 +1,27 @@
+注意:
+使用https 不需要本地github签名
+使用git 需要本地github签名
+
+$ shell 新建github 仓库publish-npm
+curl -u rofound https://api.github.com/user/repos -d "{\"name\":\"publish-npm\",\"description\":\"publish npm package\"}"
+
+$ …or create a new repository on the command line
+echo "# publish-npm" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/Rofound/publish-npm.git
+git push -u origin master
+                
+$ …or push an existing repository from the command line
+git remote add origin https://github.com/Rofound/publish-npm.git
+git push -u origin master
+
+$ 初始化npm
+npm init
+
+$ 登录npm
+npm adduser
+
+$ 发布npm
+npm publish
